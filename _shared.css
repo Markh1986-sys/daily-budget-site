@@ -1,0 +1,53 @@
+/* Shared styles for the Daily Budget marketing site */
+*{box-sizing:border-box;margin:0;padding:0;}
+:root{
+  --bg:#ffffff; --bg2:#f5f5f7; --text:#1d1d1f; --muted:#6e6e73;
+  --link:#7C3AED; --link-hover:#5B21B6; --border:#d2d2d7;
+  --max:720px;
+}
+@media(prefers-color-scheme:dark){
+  :root{--bg:#1d1d1f; --bg2:#2a2a2c; --text:#f5f5f7; --muted:#a1a1a6; --border:#3a3a3c;}
+}
+html{font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text","Segoe UI",Roboto,sans-serif;-webkit-font-smoothing:antialiased;background:var(--bg);color:var(--text);}
+body{min-height:100vh;display:flex;flex-direction:column;}
+.container{width:100%;max-width:var(--max);margin:0 auto;padding:0 24px;}
+nav{padding:18px 0;border-bottom:0.5px solid var(--border);}
+nav .container{display:flex;justify-content:space-between;align-items:center;}
+nav .brand{font-weight:600;font-size:17px;text-decoration:none;color:var(--text);}
+nav .brand-mark{display:inline-block;width:26px;height:26px;background:linear-gradient(135deg,#6366F1,#7C3AED);border-radius:6px;vertical-align:middle;margin-right:7px;color:#fff;font-size:13px;font-weight:700;text-align:center;line-height:26px;}
+nav ul{list-style:none;display:flex;gap:22px;}
+nav ul a{color:var(--muted);text-decoration:none;font-size:14px;}
+nav ul a:hover{color:var(--text);}
+main{flex:1;padding:48px 0 80px;}
+h1{font-size:38px;font-weight:600;letter-spacing:-0.02em;margin-bottom:14px;}
+h2{font-size:24px;font-weight:600;margin-top:42px;margin-bottom:12px;letter-spacing:-0.01em;}
+h3{font-size:18px;font-weight:600;margin-top:24px;margin-bottom:8px;}
+p{margin-bottom:14px;line-height:1.6;font-size:16px;}
+ul.bullets{padding-left:22px;margin-bottom:14px;}
+ul.bullets li{margin-bottom:6px;line-height:1.6;}
+.meta{color:var(--muted);font-size:14px;margin-bottom:30px;}
+a{color:var(--link);text-decoration:none;}
+a:hover{color:var(--link-hover);text-decoration:underline;}
+.hero{padding:60px 0;}
+.hero h1{font-size:48px;margin-bottom:18px;}
+.hero p.lead{font-size:20px;color:var(--muted);max-width:560px;line-height:1.5;}
+.btn-row{margin-top:32px;display:flex;gap:14px;flex-wrap:wrap;}
+.btn{display:inline-block;padding:13px 22px;border-radius:8px;font-weight:600;font-size:15px;text-decoration:none;}
+.btn-primary{background:#1d1d1f;color:#fff;}
+.btn-primary:hover{background:#3a3a3c;color:#fff;text-decoration:none;}
+.btn-secondary{background:var(--bg2);color:var(--text);}
+.btn-secondary:hover{background:var(--border);color:var(--text);text-decoration:none;}
+.section{padding:32px 0;}
+.card{background:var(--bg2);border-radius:14px;padding:24px;margin-bottom:14px;}
+.faq-q{font-weight:600;margin-bottom:6px;}
+footer{padding:32px 0;border-top:0.5px solid var(--border);color:var(--muted);font-size:13px;text-align:center;}
+footer a{color:var(--muted);}
+.feature-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin:24px 0;}
+.feature-card{background:var(--bg2);padding:20px;border-radius:12px;}
+.feature-card h3{margin-top:0;font-size:16px;color:var(--link);}
+.feature-card p{font-size:14px;color:var(--muted);margin-bottom:0;}
+@media (max-width:560px){
+  h1{font-size:30px;}
+  .hero h1{font-size:34px;}
+  .hero p.lead{font-size:17px;}
+}
